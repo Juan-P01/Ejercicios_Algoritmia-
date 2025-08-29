@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background-color: #f4f4f4;
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    </style>
+
+</head>
+   <!--PROGRAMA: NUMERO MULTIPLO DE 5 -->
+ 
+ <!--VARIABLE ENTRADA-->
+ <!--numero-->
+
+ <!--VARIABLE SALIDA-->
+ <!--resultado,numero-->
+
+ <!--PROCESO-EL PROGRAMA-->
+ <!--define si el numero es multiplo de 5-->
+<body>
+
+    <h3>NUMERO MULTIPLO DE 5</h3>
+   
+    <input type="number" id="numero" placeholder="Ingrese su numero" >
+    <button onclick="registrar()">registrar</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function registrar(){
+            let input=document.getElementById("numero").value;
+            let numero = parseFloat(input)
+            let resultado="";
+
+            if (numero % 5==0){
+                 resultado ="su numero es multiplo de 5"
+            }else{
+                resultado ="su numero no es multiplo de 5"
+            }
+    
+            document.getElementById("resultado").innerText=resultado;
+        }
+    </script>
+</body>
+</html>

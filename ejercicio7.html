@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: azure;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+ <!--PROGRAMA: define si tiene acceso con contraseña -->
+ 
+ <!--VARIABLE ENTRADA-->
+ <!--usuario,admin-->
+
+ <!--VARIABLE SALIDA-->
+ <!--usuario,admin,resultado-->
+
+ <!--PROCESO-EL PROGRAMA-->
+ <!--comprueba si el suario ingresa la contraseña correcta-->
+<body>  
+
+    <h3>ADMIN</h3>
+   <select id="usuario">
+     <option value="usuario" id="usuario">USUARIO</option>
+     <option  value="admin" id="admin">admin</option>
+   </select>
+   <input type="text" id="contra" placeholder="INGRESE LA CONTRASEÑA ">
+    <button onclick="registrar()">REGISTRAR</button>
+
+    <div id="resultado"></div>
+
+    <script>
+     function registrar(){
+        let usuario=document.getElementById("usuario").value.trim();
+        let contra=document.getElementById("contra").value;
+        let resultado="";
+
+        if (usuario==="admin" && contra==="123"){
+                resultado="TIENE ACCESO"
+        }else{
+                resultado="NO TIENE ACCESO"
+        }
+        document.getElementById("resultado").innerText=resultado;
+        }
+
+    </script>
+</body>
+</html>

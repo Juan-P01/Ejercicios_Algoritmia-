@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 40px;
+            text-align: center;
+        }
+        #resultado{
+            font-size: 20px;
+            color: blue;
+        }
+        button{
+            font-size: 30px;
+        }
+        input{
+            font-size: 30px;
+        }
+    </style>
+</head>
+   <!--PROGRAMA: QUE DIFINE SI TIENE ACCESO -->
+ 
+ <!--VARIABLE ENTRADA-->
+ <!--usuario-->
+
+ <!--VARIABLE SALIDA-->
+ <!--resultado,usuario-->
+
+ <!--PROCESO-EL PROGRAMA-->
+ <!--comprueba si el usuario ingresa con la contraseña admin tiene acceso-->
+<body>
+
+    <h3>ADMIN</h3>
+    <input type="text" id="usuario" placeholder="INGRESE SU USUARIO">
+    <button onclick="registrar()">REGISTRAR</button>
+
+    <div id="resultado"></div>
+
+    <script>
+     function registrar(){
+        let usuario=document.getElementById("usuario").value.trim();
+        let resultado="";
+
+        if (usuario==="admin"){
+                resultado="TIENE ACCESO"
+        }else{
+                resultado="NO TIENE ACCESO"
+        }
+        document.getElementById("resultado").innerText=resultado;
+        }
+
+    </script>
+</body>
+</html>

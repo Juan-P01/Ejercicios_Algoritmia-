@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio Edad</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background-color: #f4f4f4;
+    }
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+  <!--PROGRAMA: EJERCICIO EDAD -->
+ 
+ <!--VARIABLE ENTRADA-->
+ <!--edad,nac-->
+
+ <!--VARIABLE SALIDA-->
+ <!--resultado,edad y nac-->
+
+ <!--PROCESO-EL PROGRAMA-->
+ <!--define si el usuario puede votar-->
+<body>
+
+  <h4>EJERCICIO EDAD</h4>
+
+  <input type="number" id="edad" placeholder="INGRESE SU EDAD">
+  <input type="text" id="nac" placeholder="INGRESE SU NACIONALIDAD">
+
+  <button onclick="registrar()">Registrar</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    function registrar() {
+      let edad = parseInt(document.getElementById("edad").value);
+      let nac = document.getElementById("nac").value.trim().toLowerCase();
+      let resultado = "";
+
+      if (isNaN(edad)) {
+        resultado = "INGRESE UN NÚMERO VÁLIDO";
+      } else if (edad >= 18 && nac === "colombiano") {
+        resultado = "USTED PUEDE VOTAR";
+      } else {
+        resultado = "USTED NO PUEDE VOTAR";
+      }
+
+      document.getElementById("resultado").innerText = resultado;
+    }
+  </script>
+</body>
+</html>

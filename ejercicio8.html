@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--PROGRAMA: numero >100 o <-100 -->
+ 
+ <!--VARIABLE ENTRADA-->
+ <!--numero-->
+
+ <!--VARIABLE SALIDA-->
+ <!--numero,resultado-->
+
+ <!--PROCESO-EL PROGRAMA-->
+ <!--define si el numero ingresado es >100 o <-100-->
+<body>
+
+    <h3>NUMERO</h3>
+    <input type="number" id="numero" placeholder="INGRESE SU NUMERO">
+    <button onclick="registrar()">REGISTRAR</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function registrar(){
+        let numero= parseFloat(document.getElementById("numero").value);
+        let resultado="";
+
+        if (numero >100){
+                resultado="SU NUMERO ES MAYOR A 100"
+        }else if (numero <-100){
+                resultado="SU NUMERO ES MENOR A -100"
+        }else{
+            resultado="su numero esta entre 100 y -100"
+        }
+        document.getElementById("resultado").innerText=resultado;
+        }
+    </script>
+</body>
+</html>
